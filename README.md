@@ -44,9 +44,11 @@ project/
 │    │    ├── base/               # reset, typography, helpers
 │    │    ├── components/         # style cho component nhỏ (button, card…)
 │    │    ├── layout/             # header, footer, grid, nav, sidebar…
-│    │    ├── page/               # style cho từng page riêng
-│    │    ├── templates/          # section HTML + style đi kèm (nếu có)
-│    │    └── main.scss           # file root import toàn bộ SCSS
+│    │    ├── pages/              # style cho từng page riêng
+│    │    ├── themes/             # nhiều chủ đề màu sắc (dark, light, seasonal…)
+│    │    ├── utilities/          # helper class, tiện ích nhanh
+│    │    ├── vendors/            # override hoặc import CSS/SCSS từ thư viện bên ngoài
+│    │    └── style.scss          # file root, nơi import tất cả các phần trên
 │    │
 │    └── templates/               # HTML template tái sử dụng (header.html, footer.html…)
 │         ├── header.html
