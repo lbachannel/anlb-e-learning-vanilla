@@ -15,8 +15,8 @@ $ npm run dev
 ## PROJECT STRUCTURE
 ```
 project/
-│── public/                       # chứa file HTML chính
-│    └── index.html
+│── public/                       # public ra ngoài internet, ai củng có thể truy cập
+│    └── image/css/js
 │
 │── src/
 │    ├── assets/                  # tài nguyên tĩnh (css build, img, fonts, js lib)
@@ -39,21 +39,22 @@ project/
 │    │            ├── slide.js
 │    │            └── slide.scss
 │    │
-│    ├── scss/                    # Sass source code
-│    │    ├── abstracts/          # variables, mixins, functions
-│    │    ├── base/               # reset, typography, helpers
-│    │    ├── components/         # style cho component nhỏ (button, card…)
-│    │    ├── layout/             # header, footer, grid, nav, sidebar…
-│    │    ├── pages/              # style cho từng page riêng
-│    │    ├── themes/             # nhiều chủ đề màu sắc (dark, light, seasonal…)
-│    │    ├── utilities/          # helper class, tiện ích nhanh
-│    │    ├── vendors/            # override hoặc import CSS/SCSS từ thư viện bên ngoài
-│    │    └── style.scss          # file root, nơi import tất cả các phần trên
+│    ├── scss/                     # Sass source (7–1 pattern)
+│    │   ├── abstracts/            # variables, mixins, functions, placeholders
+│    │   ├── base/                 # reset/normalize, base, typography
+│    │   ├── components/           # button, card, modal, tabs...
+│    │   ├── layout/               # header, footer, grid, nav, sidebar...
+│    │   ├── pages/                # style theo trang
+│    │   ├── themes/               # light, dark...
+│    │   ├── utilities/            # helper classes
+│    │   ├── vendors/              # scss/css của thư viện ngoài (nếu có)
+│    │   └── style.scss            # file root import tất cả phần trên
 │    │
 │    └── templates/               # HTML template tái sử dụng (header.html, footer.html…)
 │         ├── header.html
 │         └── footer.html
 │
+│── index.html
 │── package.json
 │── README.md
 ```
