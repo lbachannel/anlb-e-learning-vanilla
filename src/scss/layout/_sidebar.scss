@@ -1,0 +1,19 @@
+.sidebar {
+    width: 257px;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+
+    & .item {
+        padding: 10px 20px;
+
+        &:hover {
+            cursor: pointer;
+            background: #f3f3f3;
+        }
+    }
+}

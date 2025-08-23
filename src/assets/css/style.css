@@ -58,7 +58,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Public Sans", sans-serif;
 }
 
 /* reset tags style default */
@@ -1198,6 +1198,32 @@ a, label, img, button, input, textarea, select {
     --grid-gutter-y: 90px;
   }
 }
+.section {
+  display: flex;
+}
+
+.sidebar {
+  width: 257px;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+}
+.item-list .item {
+  padding: 10px 20px;
+}
+.item-list .item:hover {
+  cursor: pointer;
+  background: #f3f3f3;
+}
+
+.content {
+  width: calc(100% - 257px);
+}
+
 .footer__row {
   padding: 25px 0;
   border-bottom-left-radius: 20px;
