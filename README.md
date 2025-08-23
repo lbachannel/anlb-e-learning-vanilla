@@ -28,7 +28,19 @@ project/
 │    ├── js/                      # code JavaScript chính
 │    │    ├── main.js             # entry point, import các module
 │    │    ├── utils/              # hàm helper, validator, DOM utils
+│    │    │
+│    │    ├── core/               # "xương sống" của app
+│    │    │    ├── router.js      # Router library
+│    │    │    └── store.js       # (tùy chọn) state management đơn giản
+│    │    │
+│    │    ├── pages/
+│    │    |   ├── home.js
+│    │    |   └── contact.js
+│    │    |
 │    │    └── components/         # chia nhỏ JS components (Modal, Tabs, Slide…)
+│    │        ├── layout/
+│    │        │   ├── header.js
+│    │        │   └── footer.js
 │    │        ├── modal/
 │    │        │   ├── modal.js
 │    │        │   └── modal.scss
@@ -39,23 +51,22 @@ project/
 │    │            ├── slide.js
 │    │            └── slide.scss
 │    │
-│    ├── scss/                     # Sass source (7–1 pattern)
-│    │   ├── abstracts/            # variables, mixins, functions, placeholders
-│    │   ├── base/                 # reset/normalize, base, typography
-│    │   ├── components/           # button, card, modal, tabs...
-│    │   ├── layout/               # header, footer, grid, nav, sidebar...
-│    │   ├── pages/                # style theo trang
-│    │   ├── themes/               # light, dark...
-│    │   ├── utilities/            # helper classes
-│    │   ├── vendors/              # scss/css của thư viện ngoài (nếu có)
-│    │   └── style.scss            # file root import tất cả phần trên
-│    │
-│    └── templates/               # HTML template tái sử dụng (header.html, footer.html…)
-│         ├── header.html
-│         └── footer.html
-│
+│    └── scss/                     # Sass source (7–1 pattern)
+│        ├── abstracts/            # variables, mixins, functions, placeholders
+│        ├── base/                 # reset/normalize, base, typography
+│        ├── components/           # button, card, modal, tabs...
+│        ├── layout/               # header, footer, grid, nav, sidebar...
+│        ├── pages/                # style theo trang
+│        ├── themes/               # light, dark...
+│        ├── utilities/            # helper classes
+│        ├── vendors/              # scss/css của thư viện ngoài (nếu có)
+│        └── style.scss            # file root import tất cả phần trên
+│    
+│── .gitignore
 │── index.html
+│── package-lock.json
 │── package.json
 │── README.md
+└── vite.config.js
 ```
 #### © 2025 lbachannel

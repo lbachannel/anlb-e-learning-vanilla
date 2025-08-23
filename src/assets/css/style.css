@@ -1198,5 +1198,12 @@ a, label, img, button, input, textarea, select {
     --grid-gutter-y: 90px;
   }
 }
+.footer__row {
+  padding: 25px 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  background: #f8fbfb;
+}
 
 /*# sourceMappingURL=style.css.map */
