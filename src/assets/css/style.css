@@ -1204,6 +1204,7 @@ a, label, img, button, input, textarea, select {
 
 .sidebar {
   width: 257px;
+  min-height: calc(100vh - 90px);
 }
 
 .item-list {
@@ -1218,8 +1219,14 @@ a, label, img, button, input, textarea, select {
 .item-link {
   position: relative;
   display: flex;
+  align-items: center;
+  gap: 15px;
   padding: 15px 20px;
   color: #000;
+}
+.item-link__icon {
+  width: 15px;
+  height: 15px;
 }
 .item--active .item-link::before {
   content: "";
@@ -1244,9 +1251,14 @@ a, label, img, button, input, textarea, select {
   font-weight: 500;
   color: #1890ff;
 }
+.item--active .item-link__icon {
+  filter: brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(4624%) hue-rotate(195deg) brightness(106%) contrast(101%);
+}
 
 .content {
   width: calc(100% - 257px);
+  padding-top: 20px;
+  background: #f3f3f3;
 }
 
 .footer__row {

@@ -23,13 +23,15 @@ Router.prototype._renderRouter = function() {
 
 Router.prototype.init = function() {
     window.addEventListener('click', event => {
-        if (event.target.matches('[data-link]')) {
-
-            this._handleRemoveActive(event.target);
-            this._handleActive(event.target);
+        event.preventDefault();
+        
+        if (event.target.closest('[data-link]')) {
+            const itemLink = event.target.closest('[data-link]');
             
-            event.preventDefault();
-            history.pushState('', '', event.target.href);
+            this._handleRemoveActive(itemLink);
+            this._handleActive(itemLink);
+            
+            history.pushState('', '', itemLink.href);
             this._renderRouter();
         } 
     })
