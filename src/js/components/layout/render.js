@@ -5,7 +5,7 @@ import SideBar from "./sidebar";
 
 const RenderLayout = () => {
     const div = document.createElement('div');
-    div.className = '';
+    div.className = 'wrapper';
 
     const section = document.createElement('section');
     section.className = 'section';
