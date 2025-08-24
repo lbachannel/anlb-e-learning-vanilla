@@ -49,9 +49,10 @@ const SideBar = () => {
     const itemLinkContact = _createItemLink('/contact', 'Contact', _loadIcon('contact.svg'));
 
     // item
-    const itemHome = _createItem(itemLinkHome, 'item--active');
-    const itemAbout = _createItem(itemLinkAbout);
-    const itemContact = _createItem(itemLinkContact);
+    const itemHome = location.pathname === '/' ? _createItem(itemLinkHome, 'item--active') : _createItem(itemLinkHome);
+    const itemAbout = location.pathname === '/about' ? _createItem(itemLinkAbout, 'item--active') : _createItem(itemLinkAbout);
+    const itemContact = location.pathname === '/contact' ? _createItem(itemLinkContact, 'item--active') : _createItem(itemLinkContact);
+    
 
     itemList.append(itemHome, itemAbout, itemContact);
 
