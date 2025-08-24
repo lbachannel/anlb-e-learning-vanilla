@@ -1207,6 +1207,7 @@ a, label, img, button, input, textarea, select {
   display: flex;
   min-height: 60px;
   background: var(--background-primary-color);
+  color: var(--text-color);
 }
 .header .logo {
   display: flex;
@@ -1311,6 +1312,7 @@ a, label, img, button, input, textarea, select {
   flex-shrink: 0;
   min-height: calc(100vh - 130px);
   margin-bottom: 60px;
+  background: var(--background-primary-color);
 }
 
 .sidebar {
@@ -1407,6 +1409,18 @@ html {
   --item-hover-color: #f3f3f3;
   --sidebar-box-shadow: 1px 0 0 0px rgb(240 240 240);
   --content-bg-color: #f3f3f3;
+}
+
+html.dark {
+  --primary-color: #F7DF1E;
+  --text-color: #fff;
+  --icon-color: brightness(0) saturate(100%) invert(99%) sepia(33%) saturate(6189%) hue-rotate(337deg) brightness(98%) contrast(99%);
+  --background-primary-color: #191c24;
+  --header-logo-box-shadow: none;
+  --header-menu-hover-item-color: #F7DF1E;
+  --item-hover-color: #252622;
+  --sidebar-box-shadow: none;
+  --content-bg-color: #000000;
 }
 
 .themes {

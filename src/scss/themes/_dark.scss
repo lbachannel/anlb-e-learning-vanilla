@@ -1,3 +1,16 @@
 html.dark {
-    
+    --primary-color: #F7DF1E;
+    --text-color: #fff;
+    --icon-color: brightness(0) saturate(100%) invert(99%) sepia(33%) saturate(6189%) hue-rotate(337deg) brightness(98%) contrast(99%);
+    --background-primary-color: #191c24;
+    // header
+    --header-logo-box-shadow: none;
+    --header-menu-hover-item-color: #F7DF1E;
+    // sidebar
+    --item-hover-color: #252622;
+    --sidebar-box-shadow: none;
+    // content
+    --content-bg-color: #000000;
+
+    // footer
 }
