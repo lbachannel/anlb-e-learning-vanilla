@@ -1198,13 +1198,31 @@ a, label, img, button, input, textarea, select {
     --grid-gutter-y: 90px;
   }
 }
+.header {
+  display: flex;
+  background: floralwhite;
+  height: 60px;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  width: 232px;
+  gap: 10px;
+  padding-left: 20px;
+}
+.header .logo .logo__icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(4624%) hue-rotate(195deg) brightness(106%) contrast(101%);
+}
+
 .section {
+  min-height: calc(100vh - 130px);
   display: flex;
 }
 
 .sidebar {
   width: 257px;
-  min-height: calc(100vh - 90px);
 }
 
 .item-list {
