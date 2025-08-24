@@ -1200,7 +1200,6 @@ a, label, img, button, input, textarea, select {
 }
 .header {
   display: flex;
-  background: floralwhite;
   height: 60px;
 }
 .header .logo {
@@ -1213,7 +1212,7 @@ a, label, img, button, input, textarea, select {
 .header .logo .logo__icon {
   width: 20px;
   height: 20px;
-  filter: brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(4624%) hue-rotate(195deg) brightness(106%) contrast(101%);
+  filter: var(--icon-color);
 }
 
 .section {
@@ -1232,7 +1231,7 @@ a, label, img, button, input, textarea, select {
 }
 .item-list .item:hover {
   cursor: pointer;
-  background: #f3f3f3;
+  background: var(--item-hover-color);
 }
 .item-link {
   position: relative;
@@ -1240,7 +1239,7 @@ a, label, img, button, input, textarea, select {
   align-items: center;
   gap: 15px;
   padding: 15px 20px;
-  color: #000;
+  color: var(--text-color);
 }
 .item-link__icon {
   width: 15px;
@@ -1253,7 +1252,7 @@ a, label, img, button, input, textarea, select {
   left: 0px;
   width: 3px;
   height: 100%;
-  background: #1890ff;
+  background: var(--primary-color);
 }
 .item--active .item-link::after {
   content: "";
@@ -1263,20 +1262,20 @@ a, label, img, button, input, textarea, select {
   left: 0px;
   bottom: 0px;
   opacity: 0.05;
-  background: #1890ff;
+  background: var(--primary-color);
 }
 .item--active .item-link {
   font-weight: 500;
-  color: #1890ff;
+  color: var(--primary-color);
 }
 .item--active .item-link__icon {
-  filter: brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(4624%) hue-rotate(195deg) brightness(106%) contrast(101%);
+  filter: var(--icon-color);
 }
 
 .content {
   width: calc(100% - 257px);
   padding-top: 20px;
-  background: #f3f3f3;
+  background: var(--content-bg-color);
 }
 
 .footer__row {
@@ -1285,6 +1284,14 @@ a, label, img, button, input, textarea, select {
   border-bottom-right-radius: 20px;
   text-align: center;
   background: #f8fbfb;
+}
+
+html {
+  --primary-color: #1890ff;
+  --text-color: #141414;
+  --icon-color: brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(4624%) hue-rotate(195deg) brightness(106%) contrast(101%);
+  --item-hover-color: #f3f3f3;
+  --content-bg-color: #f3f3f3;
 }
 
 /*# sourceMappingURL=style.css.map */
