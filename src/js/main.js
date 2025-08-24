@@ -14,4 +14,14 @@ const router = new Router('#content', {
     '/contact': { title: 'Contact', render: contact }
 });
 
+// FullScreen
+const fullscreen = document.querySelector('#fullscreen');
+fullscreen.onclick = () => {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+    }
+}
+
 router.init();

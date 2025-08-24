@@ -128,6 +128,8 @@ const _loadSettings = () => {
     list.className = 'header-settings__list';
     // fullscreen, lightmode, user-info
     const fullscreen = _createSettingItem({ icon: 'fullscreen.svg' });
+    const span = fullscreen.querySelector('span');
+    span.id = 'fullscreen';
     const lightmode = _createSettingItem({ customize: true });
     const userInfo = _createSettingItem({ text: `Hi, Tommy` });
 
