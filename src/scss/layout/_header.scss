@@ -8,7 +8,7 @@
         width: 232px;
         gap: 10px;
         padding-left: 20px;
-        box-shadow: 1px 0 0 0px rgb(240 240 240);
+        box-shadow: var(--header-logo-box-shadow);
 
         & .logo__icon {
             width: 20px;
@@ -45,13 +45,13 @@
         width: 100%;
         padding: 8px 32px 8px 33px;
         border-radius: 5px;
-        border: 1px solid #d2d1d6;
+        border: 1px solid var(--header-input-border-color);
         font-size: 1.6rem;
         font-weight: 500;
 
         &:focus {
             border-color: var(--primary-color); 
-            box-shadow: 0 0 4px rgba(24, 144, 255, 0.6);
+            box-shadow: var(--header-input-focus-box-shadow);
         }
 
         &-clear-btn {
