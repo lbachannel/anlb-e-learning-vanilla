@@ -74,7 +74,7 @@ const Header = () => {
     const header = document.createElement('header');
     header.className = 'header';
 
-    // logo + nav
+    // logo + menu
     const headerLogo = _loadLogo();
     const headerMenu = _loadHeaderMenu();
 

@@ -1,11 +1,16 @@
 .header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
     display: flex;
-    height: 60px;
+    min-height: 60px;
+    background: #fff;
 
     & .logo {
         display: flex;
         align-items: center;
-        width: 232px;
+        width: 238px;
         gap: 10px;
         padding-left: 20px;
         box-shadow: var(--header-logo-box-shadow);

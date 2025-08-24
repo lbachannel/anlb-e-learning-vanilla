@@ -1,4 +1,8 @@
 .section {
-    min-height: calc(100vh - 130px);
+    position: relative;
+    top: 60px;
     display: flex;
+    flex-shrink: 0;
+    min-height: calc(100vh - 130px);
+    margin-bottom: 60px;
 }

@@ -1,7 +1,12 @@
 .sidebar {
+    position: sticky;
+    top: 60px;
+    left: 0;
     width: 258px;
     z-index: 1;
     box-shadow: var(--sidebar-box-shadow);
+    flex-shrink: 0;
+    align-self: flex-start;
 }
 
 .item {
