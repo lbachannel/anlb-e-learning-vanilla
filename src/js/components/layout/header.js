@@ -57,6 +57,46 @@ const _loadSearch = () => {
     return div;
 }
 
+const _createSettingItem = (options = {}) => {
+    const { icon, text } = options;
+
+    const item = document.createElement('li');
+    item.className = 'header-settings__list-item';
+
+    if (icon) {
+        const img = document.createElement('img');
+        img.className = 'header-settings__list-item-icon'
+        img.src = icon;
+
+        const span = document.createElement('span');
+        span.append(img);
+        item.appendChild(span);
+    }
+
+    if (text) {
+        const span = document.createElement('span');
+        span.innerText = text;
+        item.appendChild(span);
+    }
+
+    return item;
+}
+
+const _loadSettings = () => {
+    const div = document.createElement('div');
+    div.className = 'header-settings';
+    
+    const list = document.createElement('ul');
+    list.className = 'header-settings__list';
+    // fullscreen, lightmode, user-info
+    const fullscreen = _createSettingItem({ icon: 'fullscreen.svg' });
+    const userInfo = _createSettingItem({ text: `Hi, Tommy` });
+
+    list.append(fullscreen, userInfo);
+    div.appendChild(list);
+    return div;
+}
+
 const _loadHeaderMenu = () => {
     const div = document.createElement('div');
     div.className = 'header__menu';
@@ -64,9 +104,9 @@ const _loadHeaderMenu = () => {
     // search
     const search = _loadSearch();
     // settings
+    const settings = _loadSettings();
 
-
-    div.append(search);
+    div.append(search, settings);
     return div;
 }
 

@@ -1214,6 +1214,7 @@ a, label, img, button, input, textarea, select {
   gap: 10px;
   padding-left: 20px;
   box-shadow: var(--header-logo-box-shadow);
+  flex-shrink: 0;
 }
 .header .logo .logo__icon {
   width: 20px;
@@ -1263,6 +1264,43 @@ a, label, img, button, input, textarea, select {
   height: 15px;
   cursor: pointer;
   color: var(--primary-color);
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 238px);
+  padding-right: 30px;
+}
+.header-settings {
+  width: 100%;
+  min-height: 60px;
+}
+.header-settings__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  min-height: 60px;
+}
+.header-settings__list-item {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.header-settings__list-item span {
+  min-width: 19px;
+  max-height: 19px;
+  padding: 5px;
+}
+.header-settings__list-item span:hover {
+  background: #e9ecef;
+  border-radius: 5px;
+}
+.header-settings__list-item-icon {
+  width: 19px;
+  height: 19px;
 }
 
 .section {
