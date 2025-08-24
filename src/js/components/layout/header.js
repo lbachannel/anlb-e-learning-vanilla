@@ -58,24 +58,48 @@ const _loadSearch = () => {
 }
 
 const _createSettingItem = (options = {}) => {
-    const { icon, text } = options;
+    const opts = Object.assign({
+        icon: '',
+        text: '',
+        customize: false
+    }, options);
 
     const item = document.createElement('li');
     item.className = 'header-settings__list-item';
 
-    if (icon) {
+    if (opts.icon) {
         const img = document.createElement('img');
         img.className = 'header-settings__list-item-icon'
-        img.src = icon;
+        img.src = opts.icon;
 
         const span = document.createElement('span');
         span.append(img);
         item.appendChild(span);
     }
 
-    if (text) {
+    if (opts.text) {
         const span = document.createElement('span');
-        span.innerText = text;
+        span.innerText = opts.text;
+        item.appendChild(span);
+    }
+
+    if (opts.customize) {
+
+        const span = document.createElement('span');
+
+        const label = document.createElement('label');
+        label.className = 'themes';
+
+        const input = document.createElement('input');
+        input.id = 'themes';
+        input.type = 'checkbox';
+        input.className = 'themes-input';
+
+        const slider = document.createElement('span');
+        slider.className = 'themes-slider';
+
+        label.append(input, slider);
+        span.appendChild(label);
         item.appendChild(span);
     }
 
@@ -90,9 +114,10 @@ const _loadSettings = () => {
     list.className = 'header-settings__list';
     // fullscreen, lightmode, user-info
     const fullscreen = _createSettingItem({ icon: 'fullscreen.svg' });
+    const lightmode = _createSettingItem({ customize: true });
     const userInfo = _createSettingItem({ text: `Hi, Tommy` });
 
-    list.append(fullscreen, userInfo);
+    list.append(fullscreen, lightmode, userInfo);
     div.appendChild(list);
     return div;
 }

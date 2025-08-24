@@ -98,15 +98,15 @@
                 justify-content: flex-end;
                 cursor: pointer;
 
+                &:not(:nth-child(2)) span:hover {
+                    background: #e9ecef;
+                    border-radius: 5px;
+                }
+
                 & span {
                     min-width: 19px;
                     max-height: 19px;
                     padding: 5px;
-                    
-                    &:hover {
-                        background: #e9ecef;
-                        border-radius: 5px;
-                    }
                 }
             }
 
