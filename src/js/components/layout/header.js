@@ -26,9 +26,11 @@ const _loadSearch = () => {
 
     const form = document.createElement('form');
     form.className = 'header__form';
+
     const icon = document.createElement('img');
     icon.src = 'search.svg';
-    icon.className = 'header__input-icon'
+    icon.className = 'header__input-icon';
+    
     const input = document.createElement('input');
     input.placeholder = 'Search here...';
     input.className = 'header__input';
@@ -84,8 +86,8 @@ const _createSettingItem = (options = {}) => {
     }
 
     if (opts.customize) {
-
         const span = document.createElement('span');
+        span.id = 'mode';
 
         const label = document.createElement('label');
         label.className = 'themes';
@@ -95,7 +97,7 @@ const _createSettingItem = (options = {}) => {
         input.type = 'checkbox';
         input.className = 'themes-input';
         input.hidden = true;
-        input.checked = false;
+        input.checked = localStorage.getItem('dark') === 'true' ? true : false;
 
         const slider = document.createElement('span');
         slider.className = 'themes-slider';
@@ -103,18 +105,6 @@ const _createSettingItem = (options = {}) => {
         label.append(input, slider);
         span.appendChild(label);
         item.appendChild(span);
-
-        span.onclick = (event) => {
-            console.log(event.target)
-            if (event.target.previousElementSibling) {
-                const input = event.target.previousElementSibling;
-                input.checked = !input.checked;
-            } else if (event.target.matches('span')) {
-                const span = event.target;
-                const input = span.querySelector('.themes-input');
-                input.checked = !input.checked;
-            }
-        }
     }
 
     return item;
