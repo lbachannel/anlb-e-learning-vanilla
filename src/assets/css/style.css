@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -1407,17 +1408,13 @@ html {
 .themes {
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 20px;
-}
-.themes-input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+  width: 42px;
+  height: 22px;
 }
 .themes-slider {
   position: absolute;
   cursor: pointer;
+  content: "";
   top: 0;
   left: 0;
   right: 0;
@@ -1428,9 +1425,13 @@ html {
 }
 .themes-slider::before {
   position: absolute;
-  content: "";
-  width: 14px;
-  height: 14px;
+  content: "🌙";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 1.2rem;
   left: 3px;
   bottom: 3px;
   background: #fff;
@@ -1438,10 +1439,11 @@ html {
   transition: 0.3s;
 }
 .themes-input:checked + .themes-slider {
-  background: #4caf50;
+  background: #F7DF1E;
 }
 .themes-input:checked + .themes-slider::before {
-  transform: translateX(24px);
+  transform: translateX(20px);
+  content: "🌞";
 }
 
 /*# sourceMappingURL=style.css.map */

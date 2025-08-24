@@ -91,9 +91,11 @@ const _createSettingItem = (options = {}) => {
         label.className = 'themes';
 
         const input = document.createElement('input');
-        input.id = 'themes';
+        input.id = 'themes-input';
         input.type = 'checkbox';
         input.className = 'themes-input';
+        input.hidden = true;
+        input.checked = false;
 
         const slider = document.createElement('span');
         slider.className = 'themes-slider';
@@ -101,6 +103,18 @@ const _createSettingItem = (options = {}) => {
         label.append(input, slider);
         span.appendChild(label);
         item.appendChild(span);
+
+        span.onclick = (event) => {
+            console.log(event.target)
+            if (event.target.previousElementSibling) {
+                const input = event.target.previousElementSibling;
+                input.checked = !input.checked;
+            } else if (event.target.matches('span')) {
+                const span = event.target;
+                const input = span.querySelector('.themes-input');
+                input.checked = !input.checked;
+            }
+        }
     }
 
     return item;
