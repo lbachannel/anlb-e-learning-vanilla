@@ -5,7 +5,7 @@
     z-index: 2;
     display: flex;
     min-height: 60px;
-    background: #fff;
+    background: var(--background-primary-color);
 
     & .logo {
         display: flex;
@@ -99,7 +99,7 @@
                 cursor: pointer;
 
                 &:not(:nth-child(2)) span:hover {
-                    background: #e9ecef;
+                    background: var(--header-menu-hover-item-color);
                     border-radius: 5px;
                 }
 

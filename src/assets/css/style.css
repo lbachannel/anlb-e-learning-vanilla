@@ -1206,7 +1206,7 @@ a, label, img, button, input, textarea, select {
   z-index: 2;
   display: flex;
   min-height: 60px;
-  background: #fff;
+  background: var(--background-primary-color);
 }
 .header .logo {
   display: flex;
@@ -1291,7 +1291,7 @@ a, label, img, button, input, textarea, select {
   cursor: pointer;
 }
 .header-settings__list-item:not(:nth-child(2)) span:hover {
-  background: #e9ecef;
+  background: var(--header-menu-hover-item-color);
   border-radius: 5px;
 }
 .header-settings__list-item span {
@@ -1401,6 +1401,7 @@ html {
   --header-logo-box-shadow: 1px 0 0 0px rgb(240 240 240);
   --header-input-border-color: #d2d1d6;
   --header-input-focus-box-shadow: 0 0 4px rgba(24, 144, 255, 0.6);
+  --header-menu-hover-item-color: #e9ecef;
   --themes-slider-bg-color: #ccc;
   --themes-slider-before-bg-color: #F7DF1E;
   --item-hover-color: #f3f3f3;
