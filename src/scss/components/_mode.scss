@@ -12,7 +12,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: #ccc;
+        background: var(--themes-slider-bg-color);
         border-radius: 34px;
         transition: 0.3s;
 
@@ -27,14 +27,14 @@
             font-size: 1.2rem;
             left: 3px;
             bottom: 3px;
-            background: #fff;
+            background: var(--background-primary-color);
             border-radius: 50%;
             transition: 0.3s;
         }
     }
 
     &-input:checked + .themes-slider {
-        background: #F7DF1E;
+        background: var(--themes-slider-before-bg-color);
     }
 
     &-input:checked + .themes-slider::before {
