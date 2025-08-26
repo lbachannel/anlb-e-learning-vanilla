@@ -1412,6 +1412,7 @@ a, label, img, button, input, textarea, select {
   padding: 25px 0;
   text-align: center;
   background: var(--footer-bg-color);
+  color: var(--footer-text-color);
 }
 
 html {
@@ -1446,6 +1447,7 @@ html {
   --sidebar-box-shadow: 1px 0 0 0px rgb(240 240 240);
   --content-bg-color: #f3f3f3;
   --footer-bg-color: #fff;
+  --footer-text-color: #141414;
 }
 
 html.dark {
@@ -1478,6 +1480,7 @@ html.dark {
   --sidebar-box-shadow: none;
   --content-bg-color: #121212;
   --footer-bg-color: #1e1e1e;
+  --footer-text-color: #888;
 }
 
 .themes {
