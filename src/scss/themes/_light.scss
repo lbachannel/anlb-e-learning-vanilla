@@ -1,7 +1,8 @@
 html {
     // root
     --text-color: #141414;
-    --icon-color: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
+    --logo-color: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
+    --icon-default-color: brightness(0) saturate(100%) invert(0%) sepia(9%) saturate(3033%) hue-rotate(355deg) brightness(97%) contrast(84%);
     --background-primary-color: #fff;
     // header
     --header-logo-box-shadow: 1px 0 0 0px rgb(240 240 240);
@@ -17,8 +18,6 @@ html {
     --sidebar-active-after-color: #1890ff;
     --sidebar-active-after-opacity: 0.05;
     --sidebar-item-hover-color: #f3f3f3;
-    
-    
     --sidebar-box-shadow: 1px 0 0 0px rgb(240 240 240);
     // content
     --content-bg-color: #f3f3f3;

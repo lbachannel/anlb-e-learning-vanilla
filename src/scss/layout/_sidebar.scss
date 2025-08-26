@@ -44,7 +44,7 @@
         }
 
         &--active &-link-icon {
-            filter: var(--icon-color);
+            filter: var(--sidebar-active-icon-color);
         }
 
     }
@@ -60,7 +60,10 @@
         &-icon {
             width: 15px;
             height: 15px;
+            filter: var(--icon-default-color);
+            transition: filter 0.25s;
         }
+        transition: color 0.25s;
     }
 
     &__item:hover {

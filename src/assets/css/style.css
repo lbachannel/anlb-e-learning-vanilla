@@ -1221,7 +1221,7 @@ a, label, img, button, input, textarea, select {
 .header .logo .logo__icon {
   width: 20px;
   height: 20px;
-  filter: var(--icon-color);
+  filter: var(--logo-color);
 }
 .header__search {
   display: flex;
@@ -1355,7 +1355,7 @@ a, label, img, button, input, textarea, select {
   background: var(--sidebar-active-after-color);
 }
 .sidebar__item--active .sidebar__item-link-icon {
-  filter: var(--icon-color);
+  filter: var(--sidebar-active-icon-color);
 }
 .sidebar__item-link {
   position: relative;
@@ -1364,10 +1364,13 @@ a, label, img, button, input, textarea, select {
   gap: 15px;
   padding: 12px 20px;
   color: var(--text-color);
+  transition: color 0.25s;
 }
 .sidebar__item-link-icon {
   width: 15px;
   height: 15px;
+  filter: var(--icon-default-color);
+  transition: filter 0.25s;
 }
 .sidebar__item:hover {
   cursor: pointer;
@@ -1397,7 +1400,8 @@ a, label, img, button, input, textarea, select {
 
 html {
   --text-color: #141414;
-  --icon-color: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
+  --logo-color: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
+  --icon-default-color: brightness(0) saturate(100%) invert(0%) sepia(9%) saturate(3033%) hue-rotate(355deg) brightness(97%) contrast(84%);
   --background-primary-color: #fff;
   --header-logo-box-shadow: 1px 0 0 0px rgb(240 240 240);
   --header-input-border-color: #d2d1d6;
