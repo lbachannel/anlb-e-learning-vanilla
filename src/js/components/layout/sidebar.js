@@ -56,7 +56,10 @@ const SideBar = () => {
 
     itemList.append(itemHome, itemAbout, itemContact);
 
-    container.appendChild(itemList);
+    const activeLine = document.createElement('div');
+    activeLine.className = 'sidebar__active-line';
+    
+    container.append(itemList, activeLine);
 
     return container;
 }

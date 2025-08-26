@@ -1329,20 +1329,13 @@ a, label, img, button, input, textarea, select {
 .sidebar__list {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+}
+.sidebar__item {
+  position: relative;
 }
 .sidebar__item--active > .sidebar__item-link {
   font-weight: 500;
   color: var(--sidebar-active-text-color);
-}
-.sidebar__item--active > .sidebar__item-link::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 3px;
-  height: 100%;
-  background: var(--sidebar-active-before-color);
 }
 .sidebar__item--active > .sidebar__item-link::after {
   content: "";
@@ -1375,6 +1368,14 @@ a, label, img, button, input, textarea, select {
 .sidebar__item:hover {
   cursor: pointer;
   background: var(--sidebar-item-hover-color);
+}
+.sidebar__active-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  background: var(--sidebar-active-line-color);
+  transition: transform 0.25s ease, height 0.25s;
 }
 
 .content {
@@ -1409,6 +1410,7 @@ html {
   --header-menu-hover-item-color: #e9ecef;
   --themes-slider-bg-color: #ccc;
   --themes-slider-before-bg-color: #F7DF1E;
+  --sidebar-active-line-color: #1890ff;
   --sidebar-active-text-color: #1890ff;
   --sidebar-active-icon-color: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
   --sidebar-active-before-color: #1890ff;

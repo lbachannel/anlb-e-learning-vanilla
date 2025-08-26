@@ -12,23 +12,14 @@
     &__list {
         display: flex;
         flex-direction: column;
-        padding-top: 20px;
     }
 
     &__item {
+        position: relative;
+
         &--active > &-link {
             font-weight: 500;
             color: var(--sidebar-active-text-color);
-        }
-
-        &--active > &-link::before {
-            content: "";
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 3px;
-            height: 100%;
-            background: var(--sidebar-active-before-color);
         }
 
         &--active > &-link::after {
@@ -69,5 +60,14 @@
     &__item:hover {
         cursor: pointer;
         background: var(--sidebar-item-hover-color);
+    } 
+
+    &__active-line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        background: var(--sidebar-active-line-color);
+        transition: transform 0.25s ease, height 0.25s;
     }
 }

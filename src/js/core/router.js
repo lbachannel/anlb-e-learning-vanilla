@@ -36,7 +36,11 @@ Router.prototype.init = function() {
         } 
     })
     window.addEventListener('popstate', () => this._renderRouter());
-    window.addEventListener('DOMContentLoaded', () => this._renderRouter());
+    window.addEventListener('DOMContentLoaded', () => {
+        this._renderRouter();
+        const currentItem = document.querySelector('.sidebar__item--active');
+        this._updateActiveLine(currentItem, true);
+    });
 }
 
 Router.prototype._handleRemoveActive = function(tag) {
@@ -47,9 +51,27 @@ Router.prototype._handleRemoveActive = function(tag) {
     });
 }
 
+Router.prototype._updateActiveLine = function(currentItem, refreshPage = false) {
+    const activeItem = currentItem;
+    const sidebarList = activeItem.closest('ul');
+    const activeLine = sidebarList.nextElementSibling;
+    if (refreshPage) {
+        activeLine.style.transition = 'none';
+    }
+    activeLine.style.height = `${activeItem.offsetHeight}px`;
+    activeLine.style.transform = `translateY(${activeItem.offsetTop}px)`;
+
+    if (refreshPage) {
+        requestAnimationFrame(() => {
+            activeLine.style.transition = `transform 0.25s ease, height 0.25s`;
+        })
+    }
+}
+
 Router.prototype._handleActive = function(tag) {
     const currentItem = tag.closest('li');
     currentItem.classList.add('sidebar__item--active');
+    this._updateActiveLine(currentItem);
 }
 
 export default Router;
