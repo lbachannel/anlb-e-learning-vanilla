@@ -128,5 +128,9 @@
                 filter: var(--icon-default-color);
             }
         }
+
+        & .username {
+            color: var(--header-settings-username-color);
+        }
     }
 }

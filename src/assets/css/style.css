@@ -1315,6 +1315,9 @@ a, label, img, button, input, textarea, select {
   height: 19px;
   filter: var(--icon-default-color);
 }
+.header__settings .username {
+  color: var(--header-settings-username-color);
+}
 
 .section {
   position: relative;
@@ -1433,6 +1436,7 @@ html {
   --header-menu-border-bottom: none;
   --header-menu-border-left: none;
   --header-menu-hover-item-color: #e9ecef;
+  --header-settings-username-color: #141414;
   --themes-slider-bg-color: #ccc;
   --themes-slider-before-bg-color: #ffc107;
   --sidebar-bg-color: #fff;
@@ -1468,6 +1472,7 @@ html.dark {
   --header-menu-border-bottom: #333;
   --header-menu-border-left: #333;
   --header-menu-hover-item-color: #ffc1072b;
+  --header-settings-username-color: #fff;
   --sidebar-bg-color: #1e1e1e;
   --sidebar-active-line-color: #ffc107;
   --sidebar-active-text-color: #ffc107;
