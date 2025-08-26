@@ -8,6 +8,7 @@
     box-shadow: var(--sidebar-box-shadow);
     flex-shrink: 0;
     align-self: flex-start;
+    background: var(--sidebar-bg-color);
 
     &__list {
         display: flex;
@@ -29,6 +30,7 @@
             right: 0px;
             left: 0px;
             bottom: 0px;
+            z-index: -1;
             opacity: var(--sidebar-active-after-opacity);
             background: var(--sidebar-active-after-color);
 
@@ -60,7 +62,12 @@
     &__item:hover {
         cursor: pointer;
         background: var(--sidebar-item-hover-color);
-    } 
+    }
+
+    &__item:not(.sidebar__item--active):hover > &__item-link {
+        color: var(--sidebar-item-link-text-hover-color);
+        filter: var(--sidebar-item-link-icon-hover-color);
+    }
 
     &__active-line {
         position: absolute;

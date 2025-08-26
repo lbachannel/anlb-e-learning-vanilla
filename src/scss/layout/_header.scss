@@ -16,11 +16,16 @@
         padding-left: 20px;
         box-shadow: var(--header-logo-box-shadow);
         flex-shrink: 0;
+        background: var(--header-logo-bg-color);
 
         & .logo__icon {
             width: 20px;
             height: 20px;
             filter: var(--logo-color);
+        }
+
+        & .logo__text {
+            color: var(--logo-text-color);
         }
     }
 
@@ -45,6 +50,8 @@
         left: 11px;
         width: 13px;
         height: 13px;
+        z-index: 1;
+        filter: var(--header-input-icon-color);
     }
 
     &__input {
@@ -53,11 +60,12 @@
         padding: 8px 32px 8px 33px;
         border-radius: 5px;
         border: 1px solid var(--header-input-border-color);
+        background: var(--header-input-bg-color);
         font-size: 1.6rem;
         font-weight: 500;
 
         &:focus {
-            border-color: var(--primary-color); 
+            border-color: var(--header-input-focus-border-color); 
             box-shadow: var(--header-input-focus-box-shadow);
         }
 
@@ -70,7 +78,7 @@
             width: 15px;
             height: 15px;
             cursor: pointer;
-            color: var(--primary-color);
+            color: var(--header-input-clear-btn-color);
         }
     }
 
@@ -79,6 +87,7 @@
         align-items: center;
         width: calc(100% - 238px);
         padding-right: 30px;
+        border-bottom: 1px solid var(--header-menu-border-bottom);
     }
 
     &__settings {
@@ -114,6 +123,7 @@
             &-item-icon {
                 width: 19px;
                 height: 19px;
+                filter: var(--icon-default-color);
             }
         }
     }

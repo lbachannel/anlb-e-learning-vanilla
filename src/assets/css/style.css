@@ -1217,11 +1217,15 @@ a, label, img, button, input, textarea, select {
   padding-left: 20px;
   box-shadow: var(--header-logo-box-shadow);
   flex-shrink: 0;
+  background: var(--header-logo-bg-color);
 }
 .header .logo .logo__icon {
   width: 20px;
   height: 20px;
   filter: var(--logo-color);
+}
+.header .logo .logo__text {
+  color: var(--logo-text-color);
 }
 .header__search {
   display: flex;
@@ -1242,6 +1246,8 @@ a, label, img, button, input, textarea, select {
   left: 11px;
   width: 13px;
   height: 13px;
+  z-index: 1;
+  filter: var(--header-input-icon-color);
 }
 .header__input {
   position: relative;
@@ -1249,11 +1255,12 @@ a, label, img, button, input, textarea, select {
   padding: 8px 32px 8px 33px;
   border-radius: 5px;
   border: 1px solid var(--header-input-border-color);
+  background: var(--header-input-bg-color);
   font-size: 1.6rem;
   font-weight: 500;
 }
 .header__input:focus {
-  border-color: var(--primary-color);
+  border-color: var(--header-input-focus-border-color);
   box-shadow: var(--header-input-focus-box-shadow);
 }
 .header__input-clear-btn {
@@ -1265,13 +1272,14 @@ a, label, img, button, input, textarea, select {
   width: 15px;
   height: 15px;
   cursor: pointer;
-  color: var(--primary-color);
+  color: var(--header-input-clear-btn-color);
 }
 .header__menu {
   display: flex;
   align-items: center;
   width: calc(100% - 238px);
   padding-right: 30px;
+  border-bottom: 1px solid var(--header-menu-border-bottom);
 }
 .header__settings {
   width: 100%;
@@ -1303,6 +1311,7 @@ a, label, img, button, input, textarea, select {
 .header__settings-list-item-icon {
   width: 19px;
   height: 19px;
+  filter: var(--icon-default-color);
 }
 
 .section {
@@ -1325,6 +1334,7 @@ a, label, img, button, input, textarea, select {
   box-shadow: var(--sidebar-box-shadow);
   flex-shrink: 0;
   align-self: flex-start;
+  background: var(--sidebar-bg-color);
 }
 .sidebar__list {
   display: flex;
@@ -1344,6 +1354,7 @@ a, label, img, button, input, textarea, select {
   right: 0px;
   left: 0px;
   bottom: 0px;
+  z-index: -1;
   opacity: var(--sidebar-active-after-opacity);
   background: var(--sidebar-active-after-color);
 }
@@ -1368,6 +1379,10 @@ a, label, img, button, input, textarea, select {
 .sidebar__item:hover {
   cursor: pointer;
   background: var(--sidebar-item-hover-color);
+}
+.sidebar__item:not(.sidebar__item--active):hover > .sidebar__item-link {
+  color: var(--sidebar-item-link-text-hover-color);
+  filter: var(--sidebar-item-link-icon-hover-color);
 }
 .sidebar__active-line {
   position: absolute;
@@ -1402,35 +1417,61 @@ a, label, img, button, input, textarea, select {
 html {
   --text-color: #141414;
   --logo-color: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
+  --logo-text-color: #141414;
   --icon-default-color: brightness(0) saturate(100%) invert(0%) sepia(9%) saturate(3033%) hue-rotate(355deg) brightness(97%) contrast(84%);
   --background-primary-color: #fff;
+  --header-logo-bg-color: none;
   --header-logo-box-shadow: 1px 0 0 0px rgb(240 240 240);
+  --header-input-bg-color: #fff;
+  --header-input-icon-color: brightness(0) saturate(100%) invert(0%) sepia(9%) saturate(3033%) hue-rotate(355deg) brightness(97%) contrast(84%);
   --header-input-border-color: #d2d1d6;
+  --header-input-focus-border-color: #1890ff;
   --header-input-focus-box-shadow: 0 0 4px rgba(24, 144, 255, 0.6);
+  --header-input-clear-btn-color: #1890ff;
+  --header-menu-border-bottom: none;
   --header-menu-hover-item-color: #e9ecef;
   --themes-slider-bg-color: #ccc;
-  --themes-slider-before-bg-color: #F7DF1E;
+  --themes-slider-before-bg-color: #ffc107;
+  --sidebar-bg-color: #fff;
   --sidebar-active-line-color: #1890ff;
   --sidebar-active-text-color: #1890ff;
   --sidebar-active-icon-color: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
-  --sidebar-active-before-color: #1890ff;
   --sidebar-active-after-color: #1890ff;
   --sidebar-active-after-opacity: 0.05;
   --sidebar-item-hover-color: #f3f3f3;
+  --sidebar-item-link-text-hover-color: #141414;
+  --sidebar-item-link-icon-hover-color: brightness(0) saturate(100%) invert(0%) sepia(3%) saturate(374%) hue-rotate(326deg) brightness(87%) contrast(85%);
   --sidebar-box-shadow: 1px 0 0 0px rgb(240 240 240);
   --content-bg-color: #f3f3f3;
 }
 
 html.dark {
-  --primary-color: #F7DF1E;
-  --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(99%) sepia(33%) saturate(6189%) hue-rotate(337deg) brightness(98%) contrast(99%);
-  --background-primary-color: #191c24;
+  --text-color: #a0a0a0;
+  --logo-color: brightness(0) saturate(100%) invert(81%) sepia(78%) saturate(5465%) hue-rotate(346deg) brightness(106%) contrast(109%);
+  --logo-text-color: #ffc107;
+  --icon-default-color: brightness(0) saturate(100%) invert(68%) sepia(25%) saturate(28%) hue-rotate(2deg) brightness(93%) contrast(80%);
+  --background-primary-color: #121212;
+  --header-logo-bg-color: #1e1e1e;
+  --header-input-icon-color: brightness(0) saturate(100%) invert(68%) sepia(25%) saturate(28%) hue-rotate(2deg) brightness(93%) contrast(80%);
+  --header-input-bg-color: #1e1e1e;
   --header-logo-box-shadow: none;
-  --header-menu-hover-item-color: #F7DF1E;
-  --item-hover-color: #252622;
+  --header-input-border-color: #333;
+  --header-input-focus-border-color: #333;
+  --header-input-focus-box-shadow: none;
+  --header-input-clear-btn-color: #f0f0f0;
+  --header-menu-border-bottom: #333;
+  --header-menu-hover-item-color: #ffc1072b;
+  --sidebar-bg-color: #1e1e1e;
+  --sidebar-active-line-color: #ffc107;
+  --sidebar-active-text-color: #ffc107;
+  --sidebar-active-icon-color: brightness(0) saturate(100%) invert(87%) sepia(16%) saturate(6748%) hue-rotate(348deg) brightness(101%) contrast(109%);
+  --sidebar-active-after-color: #3a3a3a;
+  --sidebar-active-after-opacity: 1;
+  --sidebar-item-hover-color: #2c2c2c;
+  --sidebar-item-link-text-hover-color: #f0f0f0;
+  --sidebar-item-link-icon-hover-color: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(940%) hue-rotate(197deg) brightness(116%) contrast(88%);
   --sidebar-box-shadow: none;
-  --content-bg-color: #000000;
+  --content-bg-color: #121212;
 }
 
 .themes {
