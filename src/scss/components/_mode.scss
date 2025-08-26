@@ -18,7 +18,7 @@
 
         &::before {
             position: absolute;
-            content: "🌙";
+            content: "🌞";
             display: flex;
             align-items: center;
             justify-content: center;
@@ -39,6 +39,6 @@
 
     &-input:checked + .themes-slider::before {
         transform: translateX(20px);
-        content: "🌞";
+        content: "🌙";
     }
 }

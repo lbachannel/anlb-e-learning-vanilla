@@ -1340,7 +1340,7 @@ a, label, img, button, input, textarea, select {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 15px 20px;
+  padding: 12px 20px;
   color: var(--text-color);
 }
 .item-link__icon {
@@ -1443,7 +1443,7 @@ html.dark {
 }
 .themes-slider::before {
   position: absolute;
-  content: "🌙";
+  content: "🌞";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1461,7 +1461,7 @@ html.dark {
 }
 .themes-input:checked + .themes-slider::before {
   transform: translateX(20px);
-  content: "🌞";
+  content: "🌙";
 }
 
 /*# sourceMappingURL=style.css.map */
