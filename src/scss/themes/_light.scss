@@ -1,6 +1,5 @@
 html {
     // root
-    --primary-color: #1890ff;
     --text-color: #141414;
     --icon-color: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
     --background-primary-color: #fff;
@@ -12,8 +11,14 @@ html {
     --themes-slider-bg-color: #ccc;
     --themes-slider-before-bg-color: #F7DF1E;
     // sidebar
+    --sidebar-active-text-color: #1890ff;
     --sidebar-active-icon-color: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
-    --item-hover-color: #f3f3f3;
+    --sidebar-active-before-color: #1890ff;
+    --sidebar-active-after-color: #1890ff;
+    --sidebar-active-after-opacity: 0.05;
+    --sidebar-item-hover-color: #f3f3f3;
+    
+    
     --sidebar-box-shadow: 1px 0 0 0px rgb(240 240 240);
     // content
     --content-bg-color: #f3f3f3;
