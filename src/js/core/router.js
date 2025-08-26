@@ -41,15 +41,15 @@ Router.prototype.init = function() {
 
 Router.prototype._handleRemoveActive = function(tag) {
     const itemList = tag.closest('ul');
-    const items = Array.from(itemList.querySelectorAll('.item'));
+    const items = Array.from(itemList.querySelectorAll('.sidebar__item'));
     items.forEach(item => {
-        item.classList.remove("item--active");
+        item.classList.remove("sidebar__item--active");
     });
 }
 
 Router.prototype._handleActive = function(tag) {
     const currentItem = tag.closest('li');
-    currentItem.classList.add('item--active');
+    currentItem.classList.add('sidebar__item--active');
 }
 
 export default Router;

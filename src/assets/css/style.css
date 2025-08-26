@@ -1325,29 +1325,16 @@ a, label, img, button, input, textarea, select {
   flex-shrink: 0;
   align-self: flex-start;
 }
-
-.item-list {
+.sidebar__list {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
 }
-.item-list .item:hover {
-  cursor: pointer;
-  background: var(--item-hover-color);
+.sidebar__item--active > .sidebar__item-link {
+  font-weight: 500;
+  color: var(--primary-color);
 }
-.item-link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 20px;
-  color: var(--text-color);
-}
-.item-link__icon {
-  width: 15px;
-  height: 15px;
-}
-.item--active .item-link::before {
+.sidebar__item--active > .sidebar__item-link::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -1356,7 +1343,7 @@ a, label, img, button, input, textarea, select {
   height: 100%;
   background: var(--primary-color);
 }
-.item--active .item-link::after {
+.sidebar__item--active > .sidebar__item-link::after {
   content: "";
   position: absolute;
   top: 0px;
@@ -1366,12 +1353,24 @@ a, label, img, button, input, textarea, select {
   opacity: 0.05;
   background: var(--primary-color);
 }
-.item--active .item-link {
-  font-weight: 500;
-  color: var(--primary-color);
-}
-.item--active .item-link__icon {
+.sidebar__item--active .sidebar__item-link-icon {
   filter: var(--icon-color);
+}
+.sidebar__item-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  color: var(--text-color);
+}
+.sidebar__item-link-icon {
+  width: 15px;
+  height: 15px;
+}
+.sidebar__item:hover {
+  cursor: pointer;
+  background: var(--sidebar-active-icon-color);
 }
 
 .content {
@@ -1398,7 +1397,7 @@ a, label, img, button, input, textarea, select {
 html {
   --primary-color: #1890ff;
   --text-color: #141414;
-  --icon-color: brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(4624%) hue-rotate(195deg) brightness(106%) contrast(101%);
+  --icon-color: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
   --background-primary-color: #fff;
   --header-logo-box-shadow: 1px 0 0 0px rgb(240 240 240);
   --header-input-border-color: #d2d1d6;
@@ -1406,6 +1405,7 @@ html {
   --header-menu-hover-item-color: #e9ecef;
   --themes-slider-bg-color: #ccc;
   --themes-slider-before-bg-color: #F7DF1E;
+  --sidebar-active-icon-color: filter: brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(5258%) hue-rotate(192deg) brightness(102%) contrast(102%);
   --item-hover-color: #f3f3f3;
   --sidebar-box-shadow: 1px 0 0 0px rgb(240 240 240);
   --content-bg-color: #f3f3f3;

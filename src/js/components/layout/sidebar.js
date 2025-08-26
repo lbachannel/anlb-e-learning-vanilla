@@ -1,7 +1,7 @@
 const _createItem = (itemLink, cssClass = '') => {
     const item = document.createElement('li');
 
-    item.className = `item ${cssClass}`;
+    item.className = `sidebar__item ${cssClass}`;
     item.append(itemLink);
 
     return item;
@@ -11,7 +11,7 @@ const _createItem = (itemLink, cssClass = '') => {
 const _createItemLink = (path, text, icon = '') => {
     const a = document.createElement('a');
     a.href = path;
-    a.className = 'item-link';
+    a.className = 'sidebar__item-link';
     a.dataset.link = '';
 
     if (icon) {
@@ -31,7 +31,7 @@ const _createItemLink = (path, text, icon = '') => {
 
 const _loadIcon = (path) => {
     const icon = document.createElement('img');
-    icon.className = 'item-link__icon';
+    icon.className = 'sidebar__item-link-icon';
     icon.src = path;
     return icon;
 }
@@ -41,7 +41,7 @@ const SideBar = () => {
     container.className = 'sidebar';
 
     const itemList = document.createElement('ul');
-    itemList.className = 'item-list';
+    itemList.className = 'sidebar__list';
 
     // item-link
     const itemLinkHome = _createItemLink('/', 'Home', _loadIcon('home.svg'));
@@ -49,9 +49,9 @@ const SideBar = () => {
     const itemLinkContact = _createItemLink('/contact', 'Contact', _loadIcon('contact.svg'));
 
     // item
-    const itemHome = location.pathname === '/' ? _createItem(itemLinkHome, 'item--active') : _createItem(itemLinkHome);
-    const itemAbout = location.pathname === '/about' ? _createItem(itemLinkAbout, 'item--active') : _createItem(itemLinkAbout);
-    const itemContact = location.pathname === '/contact' ? _createItem(itemLinkContact, 'item--active') : _createItem(itemLinkContact);
+    const itemHome = location.pathname === '/' ? _createItem(itemLinkHome, 'sidebar__item--active') : _createItem(itemLinkHome);
+    const itemAbout = location.pathname === '/about' ? _createItem(itemLinkAbout, 'sidebar__item--active') : _createItem(itemLinkAbout);
+    const itemContact = location.pathname === '/contact' ? _createItem(itemLinkContact, 'sidebar__item--active') : _createItem(itemLinkContact);
     
 
     itemList.append(itemHome, itemAbout, itemContact);
