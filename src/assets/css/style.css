@@ -1273,34 +1273,34 @@ a, label, img, button, input, textarea, select {
   width: calc(100% - 238px);
   padding-right: 30px;
 }
-.header-settings {
+.header__settings {
   width: 100%;
   min-height: 60px;
 }
-.header-settings__list {
+.header__settings-list {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 30px;
   min-height: 60px;
 }
-.header-settings__list-item {
+.header__settings-list-item {
   min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   cursor: pointer;
 }
-.header-settings__list-item:not(:nth-child(2)) span:hover {
+.header__settings-list-item:not(:nth-child(2)) span:hover {
   background: var(--header-menu-hover-item-color);
   border-radius: 5px;
 }
-.header-settings__list-item span {
+.header__settings-list-item span {
   min-width: 19px;
   max-height: 19px;
   padding: 5px;
 }
-.header-settings__list-item-icon {
+.header__settings-list-item-icon {
   width: 19px;
   height: 19px;
 }

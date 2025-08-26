@@ -1,6 +1,6 @@
 import Content from "./content";
 import Footer from "./footer";
-import Header from "./header";
+import Header from "./header/header";
 import SideBar from "./sidebar";
 
 const RenderLayout = () => {
