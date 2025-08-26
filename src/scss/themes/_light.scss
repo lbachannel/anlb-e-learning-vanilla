@@ -14,7 +14,9 @@ html {
     --header-input-focus-border-color: #1890ff;
     --header-input-focus-box-shadow: 0 0 4px rgba(24, 144, 255, 0.6);
     --header-input-clear-btn-color: #1890ff;
+    --header-menu-bg-color: none;
     --header-menu-border-bottom: none;
+    --header-menu-border-left: none;
     --header-menu-hover-item-color: #e9ecef;
     --themes-slider-bg-color: #ccc;
     --themes-slider-before-bg-color: #ffc107;
@@ -32,4 +34,5 @@ html {
     // content
     --content-bg-color: #f3f3f3;
     // footer
+    --footer-bg-color: #fff;
 }

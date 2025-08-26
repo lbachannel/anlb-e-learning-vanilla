@@ -5,9 +5,7 @@
     z-index: 1;
     &__row {
         padding: 25px 0;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
         text-align: center;
-        background: #fff;
+        background: var(--footer-bg-color);
     }
 }

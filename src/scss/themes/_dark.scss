@@ -4,7 +4,7 @@ html.dark {
     --logo-color: brightness(0) saturate(100%) invert(81%) sepia(78%) saturate(5465%) hue-rotate(346deg) brightness(106%) contrast(109%);
     --logo-text-color: #ffc107;
     --icon-default-color: brightness(0) saturate(100%) invert(68%) sepia(25%) saturate(28%) hue-rotate(2deg) brightness(93%) contrast(80%);
-    --background-primary-color: #121212;
+    --background-primary-color: #1e1e1e;
     // header
     --header-logo-bg-color: #1e1e1e;
     --header-input-icon-color: brightness(0) saturate(100%) invert(68%) sepia(25%) saturate(28%) hue-rotate(2deg) brightness(93%) contrast(80%);
@@ -14,7 +14,9 @@ html.dark {
     --header-input-focus-border-color: #333;
     --header-input-focus-box-shadow: none;
     --header-input-clear-btn-color: #f0f0f0;
+    --header-menu-bg-color: #121212;
     --header-menu-border-bottom: #333;
+    --header-menu-border-left: #333;
     --header-menu-hover-item-color: #ffc1072b;
     // sidebar
     --sidebar-bg-color: #1e1e1e;
@@ -34,4 +36,5 @@ html.dark {
     // content
     --content-bg-color: #121212;
     // footer
+    --footer-bg-color: #1e1e1e;
 }

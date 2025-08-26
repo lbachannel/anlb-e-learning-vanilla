@@ -88,6 +88,8 @@
         width: calc(100% - 238px);
         padding-right: 30px;
         border-bottom: 1px solid var(--header-menu-border-bottom);
+        border-left: 1px solid var(--header-menu-border-left);
+        background: var(--header-menu-bg-color);
     }
 
     &__settings {
