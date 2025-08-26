@@ -1,11 +1,4 @@
-const _clearInput = (input, clearBtn) => {
-    input.value = '';
-    clearBtn.style.display = 'none';
-    input.focus();
-}
-
-
-const SearchItem = () => {
+const _initSearch = () => {
     const form = document.createElement('form');
     form.className = 'header__form';
 
@@ -24,6 +17,13 @@ const SearchItem = () => {
     clearBtn.style.display = 'none';
 
     form.append(icon, input, clearBtn);
+    return form;
+}
+
+const SearchItem = () => {
+    const search = _initSearch();
+    const input = search.querySelector('.header__input');
+    const clearBtn = search.querySelector('.header__input-clear-btn');
 
     input.oninput = (event) => {
         if (event.target.value) {
@@ -34,10 +34,12 @@ const SearchItem = () => {
     }
 
     clearBtn.onclick = () => {
-        _clearInput(input, clearBtn);
+        input.value = '';
+        clearBtn.style.display = 'none';
+        input.focus();
     }
 
-    return form;
+    return search;
 }
 
 export default SearchItem;
