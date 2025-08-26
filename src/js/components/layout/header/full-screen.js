@@ -1,9 +1,9 @@
 const _initItem = (icon) => {
     const item = document.createElement('li');
-    item.className = 'header-settings__list-item';
+    item.className = 'header__settings-list-item';
     const img = document.createElement('img');
     img.src = icon;
-    img.className = 'header-settings__list-item-icon';
+    img.className = 'header__settings-list-item-icon';
     const span = document.createElement('span');
     span.append(img);
     item.append(span);
