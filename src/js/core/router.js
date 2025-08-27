@@ -55,6 +55,9 @@ Router.prototype._updateActiveLine = function(currentItem, refreshPage = false) 
     const activeItem = currentItem;
     const sidebarList = activeItem.closest('ul');
     const activeLine = sidebarList.nextElementSibling;
+    if (!activeLine) {
+        return;
+    }
     if (refreshPage) {
         activeLine.style.transition = 'none';
     }
