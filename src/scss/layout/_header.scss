@@ -23,6 +23,7 @@
         @include abstracts.screen(lg) {
             width: 170px;
             box-shadow: none;
+            border-bottom: 1px solid var(--header-menu-border-bottom);
         }
 
         
@@ -104,6 +105,8 @@
         @include abstracts.screen(lg) {
             padding-right: 15px;
             width: calc(100% - 190px);
+            background: none;
+            border-left: none;
         }
     }
 

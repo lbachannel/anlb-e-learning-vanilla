@@ -1223,6 +1223,7 @@ a, label, img, button, input, textarea, select {
   .header .logo {
     width: 170px;
     box-shadow: none;
+    border-bottom: 1px solid var(--header-menu-border-bottom);
   }
 }
 .header .logo .logo__icon {
@@ -1293,6 +1294,8 @@ a, label, img, button, input, textarea, select {
   .header__menu {
     padding-right: 15px;
     width: calc(100% - 190px);
+    background: none;
+    border-left: none;
   }
 }
 .header__settings {
