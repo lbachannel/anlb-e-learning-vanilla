@@ -1,6 +1,7 @@
 const Footer = () => {
     const footer = document.createElement('footer');
     footer.id = 'footer';
+    footer.className = 'footer';
 
     const div = document.createElement('div');
     div.className = 'footer__row';
