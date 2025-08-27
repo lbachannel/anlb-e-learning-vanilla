@@ -14,7 +14,7 @@
         bottom: 0;
         background: var(--themes-slider-bg-color);
         border-radius: 34px;
-        transition: 0.3s;
+        transition: 0.25s;
 
         &::before {
             position: absolute;
@@ -29,7 +29,7 @@
             bottom: 3px;
             background: var(--background-primary-color);
             border-radius: 50%;
-            transition: 0.3s;
+            transition: 0.25s ease-in-out;
         }
     }
 

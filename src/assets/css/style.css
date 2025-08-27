@@ -1379,7 +1379,6 @@ a, label, img, button, input, textarea, select {
   width: 15px;
   height: 15px;
   filter: var(--icon-default-color);
-  transition: filter 0.25s;
 }
 .sidebar__item:hover {
   cursor: pointer;
@@ -1504,7 +1503,7 @@ html.dark {
   bottom: 0;
   background: var(--themes-slider-bg-color);
   border-radius: 34px;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 .themes-slider::before {
   position: absolute;
@@ -1519,7 +1518,7 @@ html.dark {
   bottom: 3px;
   background: var(--background-primary-color);
   border-radius: 50%;
-  transition: 0.3s;
+  transition: 0.25s ease-in-out;
 }
 .themes-input:checked + .themes-slider {
   background: var(--themes-slider-before-bg-color);
