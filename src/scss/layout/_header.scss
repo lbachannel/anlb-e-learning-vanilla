@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .header {
     position: fixed;
     left: 0;
@@ -18,6 +20,12 @@
         flex-shrink: 0;
         background: var(--header-logo-bg-color);
 
+        @include abstracts.screen(lg) {
+            width: 170px;
+            box-shadow: none;
+        }
+
+        
         & .logo__icon {
             width: 20px;
             height: 20px;
@@ -26,6 +34,8 @@
 
         & .logo__text {
             color: var(--logo-text-color);
+
+            
         }
     }
 
@@ -90,6 +100,11 @@
         border-bottom: 1px solid var(--header-menu-border-bottom);
         border-left: 1px solid var(--header-menu-border-left);
         background: var(--header-menu-bg-color);
+
+        @include abstracts.screen(lg) {
+            padding-right: 15px;
+            width: calc(100% - 190px);
+        }
     }
 
     &__settings {
@@ -102,6 +117,10 @@
             
             gap: 30px;
             min-height: 60px;
+
+             @include abstracts.screen(lg) {
+                gap: 15px;
+            }
 
             &-item {
                 min-height: 60px;

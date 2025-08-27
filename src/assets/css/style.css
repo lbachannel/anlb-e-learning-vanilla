@@ -1219,6 +1219,12 @@ a, label, img, button, input, textarea, select {
   flex-shrink: 0;
   background: var(--header-logo-bg-color);
 }
+@media (max-width: 991.98px) {
+  .header .logo {
+    width: 170px;
+    box-shadow: none;
+  }
+}
 .header .logo .logo__icon {
   width: 20px;
   height: 20px;
@@ -1283,6 +1289,12 @@ a, label, img, button, input, textarea, select {
   border-left: 1px solid var(--header-menu-border-left);
   background: var(--header-menu-bg-color);
 }
+@media (max-width: 991.98px) {
+  .header__menu {
+    padding-right: 15px;
+    width: calc(100% - 190px);
+  }
+}
 .header__settings {
   width: 100%;
   min-height: 60px;
@@ -1293,6 +1305,11 @@ a, label, img, button, input, textarea, select {
   justify-content: flex-end;
   gap: 30px;
   min-height: 60px;
+}
+@media (max-width: 991.98px) {
+  .header__settings-list {
+    gap: 15px;
+  }
 }
 .header__settings-list-item {
   min-height: 60px;
