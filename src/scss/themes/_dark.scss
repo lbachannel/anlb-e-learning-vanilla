@@ -18,7 +18,14 @@ html.dark {
     --header-menu-border-bottom: #333;
     --header-menu-border-left: #333;
     --header-menu-hover-item-color: #ffc1072b;
+    --header-user-border-left-color: #333;
     --header-settings-username-color: #fff;
+
+    --header-dropdown-menu-bg-color: #1e1e1e;
+    --header-dropdown-menu-box-shadow: #1e1e1e;
+    --header-dropdown-item-color: #a0a0a0;
+    --header-dropdown-item-icon-color: brightness(0) saturate(100%) invert(69%) sepia(4%) saturate(14%) hue-rotate(347deg) brightness(93%) contrast(87%);
+    --header-dropdown-item-hover-color: #2c2c2c;
     // sidebar
     --sidebar-bg-color: #1e1e1e;
     --sidebar-active-line-color: #ffc107;

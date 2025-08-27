@@ -18,7 +18,15 @@ html {
     --header-menu-border-bottom: none;
     --header-menu-border-left: none;
     --header-menu-hover-item-color: #e9ecef;
+    --header-user-border-left-color: #e9ecef;
     --header-settings-username-color: #141414;
+
+    --header-dropdown-menu-bg-color: #fff;
+    --header-dropdown-menu-box-shadow: #0003;
+    --header-dropdown-item-color: #a0a0a0;
+    --header-dropdown-item-icon-color: brightness(0) saturate(100%) invert(69%) sepia(4%) saturate(14%) hue-rotate(347deg) brightness(93%) contrast(87%);
+    --header-dropdown-item-hover-color: #f3f3f3;
+
     --themes-slider-bg-color: #ccc;
     --themes-slider-before-bg-color: #ffc107;
     // sidebar

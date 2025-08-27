@@ -131,6 +131,13 @@
 
         & .username {
             color: var(--header-settings-username-color);
+            padding: 3px 20px;
+            border-left: 1px solid var(--header-user-border-left-color);
+            cursor: pointer;
+        }
+
+        & .username:hover {
+            opacity: 0.9;
         }
     }
 }
