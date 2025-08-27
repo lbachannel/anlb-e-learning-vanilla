@@ -1226,6 +1226,11 @@ a, label, img, button, input, textarea, select {
     border-bottom: 1px solid var(--header-menu-border-bottom);
   }
 }
+@media (max-width: 767.98px) {
+  .header .logo {
+    display: none;
+  }
+}
 .header .logo .logo__icon {
   width: 20px;
   height: 20px;
@@ -1240,12 +1245,23 @@ a, label, img, button, input, textarea, select {
   width: 350px;
   height: 60px;
 }
+@media (max-width: 575.98px) {
+  .header__search {
+    width: 210px;
+  }
+}
 .header__form {
   position: relative;
   margin-left: 30px;
   display: flex;
   align-items: center;
   min-width: 270px;
+}
+@media (max-width: 575.98px) {
+  .header__form {
+    margin-left: 10px;
+    min-width: 180px;
+  }
 }
 .header__input-icon {
   position: absolute;
@@ -1298,9 +1314,20 @@ a, label, img, button, input, textarea, select {
     border-left: none;
   }
 }
+@media (max-width: 767.98px) {
+  .header__menu {
+    padding-right: 10px;
+    width: 100%;
+  }
+}
 .header__settings {
   width: 100%;
   min-height: 60px;
+}
+@media (max-width: 575.98px) {
+  .header__settings {
+    width: calc(100% - 210px);
+  }
 }
 .header__settings-list {
   display: flex;
@@ -1329,6 +1356,11 @@ a, label, img, button, input, textarea, select {
   min-width: 19px;
   max-height: 19px;
   padding: 5px;
+}
+@media (max-width: 767.98px) {
+  .header__settings-list-item span {
+    display: none;
+  }
 }
 .header__settings-list-item-icon {
   width: 19px;
