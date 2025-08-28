@@ -1,0 +1,9 @@
+.section {
+    position: relative;
+    top: 60px;
+    display: flex;
+    flex-shrink: 0;
+    min-height: calc(100vh - 126px);
+    margin-bottom: 60px;
+    background: var(--background-primary-color);
+}

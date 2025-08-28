@@ -4,7 +4,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Public Sans', sans-serif;
 }
 
 /* reset tags style default */
@@ -29,4 +29,9 @@ a, label, img, button, input, textarea, select {
     font-family: inherit;
     font-size: inherit;
     color: inherit; /* remove default styling of tag a when displayed on mobile */
+}
+
+.wrapper {
+    max-width: 100vw;
+    max-height: 100vh;
 }

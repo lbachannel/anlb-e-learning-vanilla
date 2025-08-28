@@ -1,0 +1,191 @@
+@use "../abstracts";
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    min-height: 60px;
+    background: var(--background-primary-color);
+    color: var(--text-color);
+
+    & .logo {
+        display: flex;
+        align-items: center;
+        width: 238px;
+        gap: 10px;
+        padding-left: 20px;
+        box-shadow: var(--header-logo-box-shadow);
+        flex-shrink: 0;
+        background: var(--header-logo-bg-color);
+
+        @include abstracts.screen(lg) {
+            width: 170px;
+            box-shadow: none;
+            border-bottom: 1px solid var(--header-menu-border-bottom);
+        }
+
+        @include abstracts.screen(md) {
+            display: none;
+        }
+
+        
+        & .logo__icon {
+            width: 20px;
+            height: 20px;
+            filter: var(--logo-color);
+        }
+
+        & .logo__text {
+            color: var(--logo-text-color);  
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        width: 350px;
+        height: 60px;
+
+        @include abstracts.screen(sm) {
+            width: 210px;
+        }
+    }
+
+    &__form {
+        position: relative;
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        min-width: 270px;
+
+        @include abstracts.screen(sm) {
+            margin-left: 10px;
+            min-width: 180px;
+        }
+    }
+
+    &__input-icon {
+        position: absolute;
+        top: 11px;
+        left: 11px;
+        width: 13px;
+        height: 13px;
+        z-index: 1;
+        filter: var(--header-input-icon-color);
+    }
+
+    &__input {
+        position: relative;
+        width: 100%;
+
+        padding: 8px 32px 8px 33px;
+        border-radius: 5px;
+        border: 1px solid var(--header-input-border-color);
+        background: var(--header-input-bg-color);
+        font-size: 1.6rem;
+        font-weight: 500;
+
+        &:focus {
+            border-color: var(--header-input-focus-border-color); 
+            box-shadow: var(--header-input-focus-box-shadow);
+        }
+
+        &-clear-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+            color: var(--header-input-clear-btn-color);
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 238px);
+        padding-right: 30px;
+        border-bottom: 1px solid var(--header-menu-border-bottom);
+        border-left: 1px solid var(--header-menu-border-left);
+        background: var(--header-menu-bg-color);
+
+        @include abstracts.screen(lg) {
+            padding-right: 15px;
+            width: calc(100% - 190px);
+            background: none;
+            border-left: none;
+        }
+
+        @include abstracts.screen(md) {
+            padding-right: 10px;
+            width: 100%;
+        }
+    }
+
+    &__settings {
+        width: 100%;
+        min-height: 60px;
+
+        @include abstracts.screen(sm) {
+            width: calc(100% - 210px);
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            
+            gap: 30px;
+            min-height: 60px;
+
+            @include abstracts.screen(lg) {
+                gap: 15px;
+            }
+
+            &-item {
+                min-height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                cursor: pointer;
+
+                &:not(:nth-child(2)) span:hover {
+                    background: var(--header-menu-hover-item-color);
+                    border-radius: 5px;
+                }
+
+                & span {
+                    min-width: 19px;
+                    max-height: 19px;
+                    padding: 5px;
+
+                    @include abstracts.screen(md) {
+                        display: none;
+                    }
+                }
+            }
+
+            &-item-icon {
+                width: 19px;
+                height: 19px;
+                filter: var(--icon-default-color);
+            }
+        }
+
+        & .username {
+            color: var(--header-settings-username-color);
+            padding: 3px 20px;
+            border-left: 1px solid var(--header-user-border-left-color);
+            cursor: pointer;
+        }
+
+        & .username:hover {
+            opacity: 0.9;
+        }
+    }
+}
