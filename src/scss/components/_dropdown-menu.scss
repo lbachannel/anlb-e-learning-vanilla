@@ -32,6 +32,11 @@
 
         &:hover {
             background: var(--header-dropdown-item-hover-color);
+            color: var(--header-dropdown-item-text-hover-color);
+        }
+
+        &:hover &-icon {
+            filter: var(--header-dropdown-item-icon-hover-color);
         }
 
         &-icon {
